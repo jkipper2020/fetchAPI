@@ -1,0 +1,116 @@
+/*
+    This file contains all styles for our page
+    displaying breed information for cats.
+    Author: Jonathan Kipoper
+    File: styles.css
+    Date: 6-8-2020
+ */
+html {
+    background-color: #4E4E4E;
+    border: 2px solid black;
+}
+
+body {
+    background-color: #FFFFE0;
+}
+
+/*CSS Grid Layout for the main div (the top two sections)*/
+div.mainDiv {
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-areas: "leftSection rightSection";
+}
+
+/* names the grid elements */
+section#left {grid-area: leftSection;}
+section#right { grid-area: rightSection; }
+
+/*The left and right sections of the top div */
+section#left {
+    background-color: #FFFFE0;
+    margin-left: 5px;
+    padding-left: 10px;
+}
+
+section#left h1 {
+    text-align: center;
+}
+
+section#left #breeds {
+    background-color: #E8FAFF;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+    width: 50%;
+    margin-top: 30px;
+}
+
+section#left #breed-info {
+    background-color: #E8FAFF;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+    font-weight: bold;
+    font-size: 20px;
+    width: 50%;
+    margin-top: 20px;
+}
+
+section#right {
+    background-color: #FFFFE0;
+    padding-left: 10px;
+    border-left: 2px solid black;
+}
+
+section#right p {
+
+    padding-bottom: 6px;
+    border-bottom: 1px solid #BCBCB8;
+}
+
+section#right p label {
+    font-weight: bold;
+}
+
+#breed-info {
+    z-index: -1;
+}
+
+/*This is for the bottom div*/
+/*Defines grid areas for the pictures in the bottom div*/
+.classPic1 { grid-area: pic1; }
+.classPic2 { grid-area: pic2; }
+.classPic3 { grid-area: pic3; }
+.classPic4 { grid-area: pic4; }
+.classPic5 { grid-area: pic5; }
+.classPic6 { grid-area: pic6; }
+.classPic7 { grid-area: pic7; }
+.classPic8 { grid-area: pic8; }
+.classPic9 { grid-area: pic9; }
+.classPic10 { grid-area: pic10; }
+
+.bottomDiv {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto); /*try replacing 1fr with 100px later for testing*/
+    grid-template-areas:
+    "pic1 pic2 pic3 pic4"
+    "pic5 pic6 pic7 pic8"
+    ".    pic9 pic10 .";
+}
+
+.bottomDiv img:nth-of-type(n) {
+    margin-left: 50px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.bottomDiv img:nth-of-type(n+9) {
+    margin-bottom: 20px;
+}

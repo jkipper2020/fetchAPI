@@ -1,0 +1,1 @@
+This uses the javascript fetch api and uses a cat api and loads in all of the information into a website and uses javascript to tie it in with CSS/HTML
